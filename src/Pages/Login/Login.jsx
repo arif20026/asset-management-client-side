@@ -61,23 +61,25 @@ const Login = () => {
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input type="text" name='email' placeholder="email" className="input input-bordered" />
+                            <input type="text" name='email' placeholder="email" className="input input-bordered required" />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="password" name='password' placeholder="password" className="input input-bordered" />
+                            <input type="password" name='password' placeholder="password" className="input input-bordered required" />
 
                         </div>
-                        <div className="form-control mt-6  gap-4 w-full">
+                       
+                    </form>
+
+                    <div className="form-control mt-6  gap-4 w-full">
                             <input className="btn btn-primary" type="submit" value="Login" />
                             <div >
                                 <button className='btn btn-primary w-56' ><span className='flex gap-2' onClick={handleSignInWithGoogle}>Sign in With Google<FaGoogle /></span></button>
 
                             </div>
                         </div>
-                    </form>
                     <p className='my-4 text-center'>No Account? Please <Link className='text-blue-600 font-bold' to="/register">Register</Link> </p>
 
                     {/* {
