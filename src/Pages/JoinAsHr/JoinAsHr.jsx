@@ -1,12 +1,14 @@
 import { useContext } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Provider/AuthProvider";
-import { Navigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 
 const JoinAsHr = () => {
 
     const { createUser, signInWithGoogle } = useContext(AuthContext);
+
+    const navigate = useNavigate()
 
     // const [registerError,setRegisterError] = useState('')
     // const[success,setSuccess] =useState(false)
@@ -67,6 +69,10 @@ const JoinAsHr = () => {
                     showConfirmButton: false,
                     timer: 1500
                 });
+
+                navigate('/dashboard/payment')
+
+                
 
             })
             .catch(error => {
