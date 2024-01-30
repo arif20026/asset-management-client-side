@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { FaGoogle } from "react-icons/fa";
@@ -9,6 +9,8 @@ import { FaGoogle } from "react-icons/fa";
 const Register = () => {
 
     const { createUser,signInWithGoogle } = useContext(AuthContext);
+
+    const navigate=useNavigate()
 
     // const [registerError,setRegisterError] = useState('')
     // const[success,setSuccess] =useState(false)
@@ -96,7 +98,8 @@ const Register = () => {
         signInWithGoogle()
             .then(result => {
                 console.log(result)
-                Navigate(location?.state ? location.state : ("/"))
+                // Navigate(location?.state ? location.state : ("/"))
+                navigate('/dashboard')
             })
             .catch(error => console.log(error))
     }

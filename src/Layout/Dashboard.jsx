@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink, Outlet } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
+import EmployeeHome from "../Pages/Dashboard/EmployeeHome/EmployeeHome";
 
 
 
@@ -94,6 +95,7 @@ const Dashboard = () => {
                                 </div>
                         }
                     </div>
+
                 </div>
             </div>
             <div className="flex-1 p-8">

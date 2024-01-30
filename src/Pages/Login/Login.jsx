@@ -26,7 +26,8 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
-                navigate(location?.state ? location.state : "/")
+                // navigate(location?.state ? location.state : "/")
+                navigate('/dashboard')
             })
             .catch(error => {
                 console.log(error)
@@ -70,11 +71,13 @@ const Login = () => {
                             <input type="password" name='password' placeholder="password" className="input input-bordered required" />
 
                         </div>
+
+                        <input className="btn btn-primary w-full mt-3" type="submit" value="Login" />
                        
                     </form>
 
-                    <div className="form-control mt-6  gap-4 w-full">
-                            <input className="btn btn-primary" type="submit" value="Login" />
+                    <div className="form-control mt-2 gap-4 w-full">
+                          
                             <div >
                                 <button className='btn btn-primary w-56' ><span className='flex gap-2' onClick={handleSignInWithGoogle}>Sign in With Google<FaGoogle /></span></button>
 
