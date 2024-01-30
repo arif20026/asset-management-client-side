@@ -14,6 +14,13 @@ import Team from "../Pages/Dashboard/Team/Team";
 import RequestAsset from "../Pages/Dashboard/RequestAsset/RequestAsset";
 import CustomRequest from "../Pages/Dashboard/CustomRequest/CustomRequest";
 import Profile from "../Pages/Dashboard/Profile/Profile";
+import AdminHome from "../Pages/Dashboard/AdminHome/AdminHome";
+import AssetList from "../Pages/Dashboard/AssetList/AssetList";
+import AddAsset from "../Pages/Dashboard/AddAsset/AddAsset";
+import AllRequests from "../Pages/Dashboard/AllRequests/AllRequests";
+import EmployeeList from "../Pages/Dashboard/EmployeeList/EmployeeList";
+import AddEmployee from "../Pages/Dashboard/AddEmployee/AddEmployee";
+import AdminProfile from "../Pages/Dashboard/AdminProfile/AdminProfile";
 
 
 
@@ -76,35 +83,35 @@ const router = createBrowserRouter([
         },
         {
             path:'adminHome',
-            element:<Profile></Profile>
+            element:<AdminHome></AdminHome>
         },
         {
             path:'assetList',
-            element:<Profile></Profile>
+            element:<AssetList></AssetList>
         },
         {
             path:'addAsset',
-            element:<Profile></Profile>
+            element:<AddAsset></AddAsset>
         },
         {
             path:'allRequests',
-            element:<Profile></Profile>
+            element:<AllRequests></AllRequests>
         },
         {
             path:'customRequests',
-            element:<Profile></Profile>
+            element:<CustomRequest></CustomRequest>
         },
         {
             path:'employeeList',
-            element:<Profile></Profile>
+            element:<EmployeeList></EmployeeList>
         },
         {
             path:'addEmployee',
-            element:<Profile></Profile>
+            element:<AddEmployee></AddEmployee>
         },
         {
             path:'adminProfile',
-            element:<Profile></Profile>
+            element:<AdminProfile></AdminProfile>
         },
     ]
 }
