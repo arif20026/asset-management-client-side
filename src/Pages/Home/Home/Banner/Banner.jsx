@@ -5,7 +5,7 @@ const Banner = () => {
             <div id="slide1" className="carousel-item relative w-full">
             <img src="https://i.ibb.co/Twkcq68/62da3ff90f639f2a8f469bf2-Tips-For-Choosing-Asset-Management-Software.jpg" className="w-full" />
 
-          <button className="absolute btn btn-secondary left-1/2 top-3/4">Join as HR/Admin</button>
+          <button className="absolute btn btn-primary right-1/2 bottom-1/2 bg-orange-500">Join as HR/Admin</button>
 
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                     <a href="#slide2" className="btn btn-circle">❮</a>
@@ -16,7 +16,7 @@ const Banner = () => {
             <div id="slide2" className="carousel-item relative w-full">
                 <img src="https://i.ibb.co/Twkcq68/62da3ff90f639f2a8f469bf2-Tips-For-Choosing-Asset-Management-Software.jpg" className="w-full" />
 
-                <button className="absolute btn btn-secondary left-1/2 top-3/4">Join as Employee</button>
+                <button className="absolute btn btn-primary right-1/2 bottom-1/2 bg-orange-500">Join as Employee</button>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                     <a href="#slide1" className="btn btn-circle">❮</a>
                     <a href="#slide1" className="btn btn-circle">❯</a>

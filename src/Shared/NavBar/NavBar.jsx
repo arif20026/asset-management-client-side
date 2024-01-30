@@ -15,11 +15,9 @@ const Navbar = () => {
     const navLinks = <>
 
     <li><NavLink to="/">Home</NavLink></li>
-    <li><NavLink to="/addBlog">Add Blog</NavLink></li>
-    <li><NavLink to="/blogs">Blogs</NavLink></li>
-    <li><NavLink to="/wishList">Wish List</NavLink></li>
-    <li><NavLink to="/featuredBlog">Featured Blog</NavLink></li>
-    
+    <li><NavLink to="/joinAsEmployee">Join As Employee</NavLink></li>
+    <li><NavLink to="/joinAsHr">Join As HR/Admin</NavLink></li>
+
     </>
     return (
         <div className="navbar bg-base-100">
@@ -46,7 +44,6 @@ const Navbar = () => {
                         <img src={user.photoURL} alt=""  className="rounded-full w-10 h-10"/>
                         <button className="btn btn-primary" onClick={() => handleLogOut()}>LogOut</button></div>
                      : <div className="flex gap-2">
-                        <Link to="/register"><button className="btn btn-primary" >Register</button></Link>
                         <Link to="/login"><button className="btn btn-primary" >Login</button></Link>
                      </div>
                 }

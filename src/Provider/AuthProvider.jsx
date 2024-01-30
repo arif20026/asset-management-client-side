@@ -22,11 +22,11 @@ const AuthProvider = ({ children }) => {
         }
     }
 
-    const createUser = async (email,password,displayName,photoURL) => {
+    const createUser = async (email,password,displayName,birthDate) => {
         setLoading(true)
         try{
             const result = await createUserWithEmailAndPassword(auth,email,password)
-            await updateProfile (result.user,{displayName,photoURL})
+            await updateProfile (result.user,{displayName,birthDate})
             return result
         }
         catch(error){

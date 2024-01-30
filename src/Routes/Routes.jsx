@@ -3,7 +3,8 @@ import Main from "../Layout/Main";
 import Home from "../Pages/Home/Home/Home";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Login from "../Pages/Login/Login";
-import Register from "../Pages/Register/Register";
+import JoinAsEmployee from '../Pages/JoinAsEmployee/JoinAsEmployee'
+import JoinAsHr from "../Pages/JoinAsHr/JoinAsHr";
 
 
 
@@ -22,9 +23,14 @@ const router = createBrowserRouter([
             element:<Login></Login>
         },
         {
-            path:'/register',
-            element:<Register></Register>
+            path:'/joinAsEmployee',
+            element:<JoinAsEmployee></JoinAsEmployee>
         },
+        {
+            path:'/joinAsHr',
+            element:<JoinAsHr></JoinAsHr>
+        },
+       
     ]
 }
 ])
