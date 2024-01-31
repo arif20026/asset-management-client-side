@@ -1,7 +1,10 @@
+import { useContext } from "react";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../../Provider/AuthProvider";
 
 const CustomRequest = () => {
 
+    const {user} =useContext(AuthContext)
     const handleRequestAsset = event => {
         event.preventDefault();
         const form = event.target;
@@ -11,9 +14,10 @@ const CustomRequest = () => {
         const type = form.type.value;
         const whyNeeded = form.whyNeeded.value;
         const additionalInfo = form.additionalInfo.value;
+        const email= user.email
         console.log(name, price,type,whyNeeded,additionalInfo,image)
 
-        const requestedItem ={name, price,type,whyNeeded,additionalInfo,image}
+        const requestedItem ={name, price,type,whyNeeded,additionalInfo,image,email}
     
     
         fetch('http://localhost:5000/customRequests', {
