@@ -21,6 +21,7 @@ import AllRequests from "../Pages/Dashboard/AllRequests/AllRequests";
 import EmployeeList from "../Pages/Dashboard/EmployeeList/EmployeeList";
 import AddEmployee from "../Pages/Dashboard/AddEmployee/AddEmployee";
 import AdminProfile from "../Pages/Dashboard/AdminProfile/AdminProfile";
+import CustomRequestList from "../Pages/Dashboard/CustomRequestList/CustomRequestList";
 
 
 
@@ -99,7 +100,7 @@ const router = createBrowserRouter([
         },
         {
             path:'customRequests',
-            element:<CustomRequest></CustomRequest>
+            element:<CustomRequestList></CustomRequestList>
         },
         {
             path:'employeeList',
