@@ -9,9 +9,11 @@ const AddAsset = () => {
       
         const type = form.type.value;
         const quantity = form.quantity.value;
+        const currentDate = new Date()
+        const formattedDate = `${currentDate.getFullYear()}-${currentDate.getMonth() + 1}-${currentDate.getDate()}`;
         console.log(name, type,quantity)
 
-        const AddItem ={name, type, quantity}
+        const AddItem ={name, type, quantity,date:formattedDate}
     
     
         fetch('http://localhost:5000/products', {
@@ -55,7 +57,7 @@ const AddAsset = () => {
                             <label className="label">
                                 <span className="label-text">Product Quantity</span>
                             </label>
-                            <input type="text" name='quantity' placeholder="Product Quantity" className="input input-bordered required" />
+                            <input type="number" name='quantity' placeholder="Product Quantity" className="input input-bordered required" />
                         </div>
                        
                        

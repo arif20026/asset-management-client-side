@@ -21,7 +21,7 @@ const CustomRequestList = () => {
            {
             customRequests.map( customRequest => <div className="my-8"
                  key={customRequest._id}>
-                    <img src={customRequest.image} alt="" />
+                    <img src={customRequest.image} alt="" className="w-28 h-28" />
                     <p> <span className="font-bold">Asset Name :</span>{customRequest.name}</p>
                     <p> <span className="font-bold">Price :</span>{customRequest.price}</p>
                     <p> <span className="font-bold"> Asset Type :</span>{customRequest.type}</p>

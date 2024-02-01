@@ -15,9 +15,11 @@ const CustomRequest = () => {
         const whyNeeded = form.whyNeeded.value;
         const additionalInfo = form.additionalInfo.value;
         const email= user.email
+        const currentDate = new Date()
+        const formattedDate = `${currentDate.getFullYear()}-${currentDate.getMonth() + 1}-${currentDate.getDate()}`;
         console.log(name, price,type,whyNeeded,additionalInfo,image)
 
-        const requestedItem ={name, price,type,whyNeeded,additionalInfo,image,email}
+        const requestedItem ={name, price,type,whyNeeded,additionalInfo,image,email,status:"pending",date:formattedDate}
     
     
         fetch('http://localhost:5000/customRequests', {

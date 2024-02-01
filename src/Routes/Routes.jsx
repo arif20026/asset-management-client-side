@@ -22,6 +22,7 @@ import EmployeeList from "../Pages/Dashboard/EmployeeList/EmployeeList";
 import AddEmployee from "../Pages/Dashboard/AddEmployee/AddEmployee";
 import AdminProfile from "../Pages/Dashboard/AdminProfile/AdminProfile";
 import CustomRequestList from "../Pages/Dashboard/CustomRequestList/CustomRequestList";
+import UpdateCustomRequest from "../Pages/Dashboard/EmployeeHome/UpdateCustomRequest";
 
 
 
@@ -47,6 +48,12 @@ const router = createBrowserRouter([
             path:'/joinAsHr',
             element:<JoinAsHr></JoinAsHr>
         },
+        {
+            path:'/updateRequest/:id',
+            element:<UpdateCustomRequest></UpdateCustomRequest>,
+            loader:({params})=>fetch(`http://localhost:5000/customRequests/${params.id}`)
+        },
+      
        
     ]
 },
@@ -56,8 +63,11 @@ const router = createBrowserRouter([
     children:[
         {
             path:'home',
-            element:<EmployeeHome></EmployeeHome>
+            element:<EmployeeHome></EmployeeHome>,
+           
         },
+
+        
         {
             path:'assets',
             element:<Assets></Assets>
@@ -78,6 +88,7 @@ const router = createBrowserRouter([
             path:'customRequest',
             element:<CustomRequest></CustomRequest>
         },
+        
         {
             path:'profile',
             element:<Profile></Profile>
